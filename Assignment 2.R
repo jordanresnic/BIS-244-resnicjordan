@@ -30,3 +30,4 @@ for (i in 1:n)
 for (i in 1:n)
   if (as.character(Penn$date[i])=="2020-04-22"){Penn$adj_deaths[i] <- (Penn$deaths[i] - 297)}
 sum(Penn$adj_deaths)
+
