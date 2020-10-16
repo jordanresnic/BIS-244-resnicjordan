@@ -14,9 +14,15 @@ p <- ggplot(data = twitch2,
             mapping = aes(x = Date,
                           y = Viewers,
                           color=Streamer))
-p + geom_line(mapping = aes(group = Streamer) + 
-                scale_y_continuous(labels = unit_format(unit = "M"), scale = 1e-6)
+p + geom_line(mapping = aes(group = Streamer)) +
+  labs(title = "Most Popular Twitch Streamers") +
+    scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
+              
+              
+p + geom_line(mapping = aes(group = Streamer)) +
+  facet_wrap(~ Streamer) +
+                       labs(title = "Most Popular Twitch Streamers")+
+  scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6))
+  
 
-              
-              
-p              
+                                             
