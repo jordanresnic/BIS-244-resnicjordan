@@ -1,5 +1,5 @@
 ##Jordan Resnic
-
+library(tidyverse)
 getwd()
 ## know what directory im working in
 
